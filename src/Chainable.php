@@ -34,6 +34,9 @@ trait Chainable
         ]);
         return $jobToRun ;
     }
+    protected function getChainUuid(){
+        return $this->root->chain_id ; 
+    }
     protected function addChildToChain($jobToAdd ,$chainId ){
         $chainEntity = app(config("laraveljobchain.model"));
         $chainEntity->create([
