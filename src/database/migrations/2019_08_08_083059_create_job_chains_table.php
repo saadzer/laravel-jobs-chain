@@ -22,8 +22,8 @@ class CreateJobChainsTable extends Migration
             $table->mediumText('shared_log')->nullable() ; 
             $table->string('chain_id')->unique() ; 
             $table->timestamps();
-            $table->foreign('parent_id')->references('id')->on('job_statuses');
-            $table->foreign('child_id')->references('id')->on('job_statuses');
+            //$table->foreign('parent_id')->references('id')->on('job_statuses');
+            //$table->foreign('child_id')->references('id')->on('job_statuses');
         });
     }
 
