@@ -1,0 +1,43 @@
+{
+    "name": "saadzer/laraveljobchain",
+    "description": ":description",
+    "license": "MIt",
+    "authors": [
+        {
+            "name": "Saad ZERHOUNI",
+            "email": "zer.saad@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/saadzer/laraveljobchain",
+    "keywords": ["Laravel", "LaravelJobChain"],
+    "require": {
+        "illuminate/support": "~5",
+        "imtigger/laravel-job-status": "~0.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saadzer\\LaravelJobChain\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Saadzer\\LaravelJobChain\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Saadzer\\LaravelJobChain\\LaravelJobChainServiceProvider"
+            ],
+            "aliases": {
+                "LaravelJobChain": "Saadzer\\LaravelJobChain\\Facades\\LaravelJobChain"
+            }
+        }
+    }
+}
