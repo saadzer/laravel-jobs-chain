@@ -17,6 +17,10 @@ class CreateJobChainsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('parent_id');
             $table->integer('child_id');
+            $table->boolean('has_errors')->default(false); 
+            $table->boolean('is_finished')->default(false) ; 
+            $table->mediumText('shared_log')->nullable() ; 
+            $table->string('chain_id')->unique() ; 
             $table->timestamps();
             $table->foreign('parent_id')->references('id')->on('job_statuses');
             $table->foreign('child_id')->references('id')->on('job_statuses');
