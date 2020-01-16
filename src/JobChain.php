@@ -7,7 +7,7 @@ use Imtigger\LaravelJobStatus\JobStatus;
 class JobChain extends JobStatus
 {
 
-    protected $table=app(config('laraveljobchain.chains_table')) ;
+    protected $table="job_chains" ;
 
     public function parents()
     {
