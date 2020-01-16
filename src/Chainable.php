@@ -12,7 +12,11 @@ trait Chainable
 
     protected $parents ;
     protected $children;
+    protected $root ; 
 
+    protected function getRoot(){
+        $this->root = $this->parents->with('root')->first()->root ; 
+    }
     protected function getParents(){
         $chainEntity = app(config("laraveljobchain.model"));
         $this->parents  = $chainEntity->query()->where('child_id' , $this->id)  ;
